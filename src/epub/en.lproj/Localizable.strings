@@ -1,0 +1,55 @@
+/* 
+  Localizable.strings
+  epub
+
+  Created by zhiyu zheng on 12-6-7.
+  Copyright (c) 2012年 Baidu. All rights reserved.
+*/
+
+"logo"="en";
+
+"books"="Books";
+"chapters"="Chapters";
+
+
+"tab1"="tab1_en";
+"tab2"="tab2_en";
+"tab3"="tab3_en";
+"tab1_selected"="tab1_selected_en";
+"tab2_selected"="tab2_selected_en";
+"tab3_selected"="tab3_selected_en";
+
+"loading data"="loading data... <br/>it may take some time for the first loading.";
+"loading page"="loading page";
+"recently read"="Recently read:";
+"no records"="No Records";
+
+"upload_index"="/upload_en.html";
+
+
+"delete"="delete";
+"upload"="Upload";
+
+
+"server_network_err"="No WIFI Connected!";
+"server_server_err"="Server Error!";
+"server_upload_info"="Visit the following address from PC";
+
+"store_bg"="shop_en";
+"upload_btn"="upload_en";
+
+"init_file"="Lord of the Flies";
+
+"clear records"="Clear Records";
+
+"cancelButtonLabel"="No";
+"remindButtonLabel"="Later";
+"rateButtonLabel"="Go to rate ^_^";
+"rateText"="If you like it, rate it!";
+
+"parse_error"="Parse Error!";
+"ok"="Ok";
+"message"="Message";
+"new_version"="New Version Available!";
+"go"="Go";
+"cancel"="Cancel";

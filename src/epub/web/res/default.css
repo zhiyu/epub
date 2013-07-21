@@ -1,0 +1,118 @@
+/*custom styles*/
+*{margin:0px;padding:0px;}
+html,body{
+  font-size: 12px;
+  font-family: "微软雅黑","宋体","黑体",Arial;
+  background:  #ffffff;
+}
+
+input{outline:none;}
+
+.header{
+  width: 100%;
+  position: fixed;
+  top:0px;
+  left: 0px;
+  color:#eee;
+  font-size: 14px;
+  height: 80px;
+  line-height: 80px;
+  border-bottom: 1px solid #eeeeee;
+  background: #ffffff;
+  z-index: 9;
+}
+
+.header .logo{
+  display: block;
+  width: 300px;
+  height: 60px;
+}
+
+.header .upload{
+  position: absolute;right:15px;top:0px;
+}
+
+a{
+  color:#555;
+  text-decoration: none;
+}
+
+a:hover{
+  color:#c86428;
+  text-decoration: underline;
+}
+
+.top{
+    position: relative;
+    width:960px;
+    margin-left: -480px;
+    left: 50%;
+}
+
+.main{
+    position: relative;
+    margin-top: 81px;
+    width:960px;
+    margin-left: -480px;
+    left: 50%;
+}
+
+.content{
+  overflow: auto;
+  padding: 0px 0px 0px 0px ;
+}
+
+.list{
+  background: url('/res/shadow.jpg') center 1px no-repeat;
+}
+
+.list .file{
+  background: url('/res/file.jpg') 10px center no-repeat;
+}
+
+.list .folder{
+  background: url('/res/folder.jpg') 10px center no-repeat;
+}
+
+/*table styles*/
+table.tablesorter thead th{
+  background: #f4f4f4;
+}
+
+.table th, .table td{
+  padding: 0px 5px;
+  line-height: 40px;
+}
+
+table.tablesorter thead .header {
+  background: #f4f4f4 url(../img/sortbg.gif) right center no-repeat;
+}
+table.tablesorter thead .headerSortUp {
+  background: #f4f4f4 url(../img/asc.gif) right center  no-repeat;
+}
+table.tablesorter thead .headerSortDown {
+  background: #f4f4f4 url(../img/desc.gif) right center no-repeat;
+}
+
+table.tablesorter tr.none td {
+  border-top: none;
+}
+
+table.tablesorter tr.odd td {
+  background-color: #fff;
+}
+
+table.tablesorter tr.even td {
+  background-color: #f8f8f8;
+}
+
+table.tablesorter tr.last td {
+  
+}
+
+table.tablesorter tr th.end {
+  border-right: none;
+}
+table.tablesorter tr td.end {
+  border-right: none;
+}

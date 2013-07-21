@@ -1,0 +1,54 @@
+/* 
+ Localizable.strings
+ epub
+ 
+ Created by zhiyu zheng on 12-6-7.
+ Copyright (c) 2012年 Baidu. All rights reserved.
+ */
+
+"logo"="zh";
+
+"books"="书籍列表";
+"chapters"="目录";
+
+
+"tab1"="tab1";
+"tab2"="tab2";
+"tab3"="tab3";
+"tab1_selected"="tab1_selected";
+"tab2_selected"="tab2_selected";
+"tab3_selected"="tab3_selected";
+
+"loading data"="加载数据...<br/>首次加载会花费一些时间。";
+"loading page"="加载页面";
+"recently read"="最近读过的书籍:";
+"no records"="暂无记录";
+
+"upload_index"="/upload.html";
+
+"delete"="删除";
+"upload"="上传";
+
+"server_network_err"="请将手机连接到WIFI网络!";
+"server_server_err"="文件服务器启动失败!";
+"server_upload_info"="通过电脑浏览器访问以下地址上传文件";
+
+
+"store_bg"="shop";
+"upload_btn"="upload";
+
+"init_file"="如何阅读一本书";
+
+"clear records"="清除历史记录";
+
+"cancelButtonLabel"="残忍拒绝";
+"remindButtonLabel"="稍后";
+"rateButtonLabel"="现在就去^_^";
+"rateText"="如果您觉得它还不错，去支持一下吧!";
+
+"parse_error"="解析发生错误!";
+"ok"="确定";
+"message"="消息";
+"new_version"="发现新版本，马上更新吧!";
+"go"="立即更新";
+"cancel"="取消";

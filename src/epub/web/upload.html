@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link href="/res/bootstrap.css" rel="stylesheet" />
+        <link href="/res/bootstrap-responsive.css" rel="stylesheet" />
+        <link href="/res/default.css" rel="stylesheet" />
+        <script type="text/javascript" src="/res/jquery.min.js"></script>
+        <script type="text/javascript" src="/res/jquery.tablesorter.js"></script>
+        <script type="text/javascript" src="/res/bootstrap.js"></script>
+        <style>
+            table{width:100%;}
+        </style>
+    </head>
+	<body>
+		<div class="">
+
+		    <div class="header">
+                <div class="top">
+                <a href="http://www.bracecloud.com" target="_blank" class="logo">
+                    <img src="/res/logo.gif" />
+                </a>
+                <div class="upload">
+	                <form id="upload" action="" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+						<input type="file" name="upload1" id="fileName"/>&nbsp;&nbsp;
+			            <a class="btn btn-primary" href="javascript:;" onclick="upload();">上传</a>
+			        </form>
+				</div>	 
+				</div>       
+		    </div>
+	        
+	        <div class="main">
+	           <div class="content">
+		        <table>
+					<tr>
+						<td style="vertical-align:top;">
+						    <div class="list">
+									<table id="dataTable" class="table tablesorter" style="border-bottom:1px solid #ddd;">
+									
+				                    $MyFiles$
+				                
+								    </table>
+			                </div>
+						</td>
+					</tr>
+				</table>
+	           </div>
+	        </div>
+
+		    <div class="footer"></div>
+        </div> 	
+	</body>
+</html>
+
+<script type="text/javascript">
+    function upload(){
+        $("#upload").attr("action",location.pathname);
+        if($("#fileName").val().lastIndexOf(".epub")==-1){
+            alertModal("请选择 epub 格式的文件 ^_^");
+            return;
+        }
+        $("#upload").submit();
+    }
+
+    function delFile(fileName){
+        confirmModal('请确认要删除文件吗?',function(){
+        	$.get("/delFile?fileName="+fileName+"&url="+location.href,"",function(data){
+                 if(data.indexOf("failed")!=-1){
+                    alertModal("删除失败!");
+                 }else{
+                 	alertModal("删除成功!", function(){
+                 	    location.href=data;
+                 	});
+                 }
+        	});
+        });
+    }
+
+
+	function confirmModal(details, callback){
+	  var s = "<div class='modal hide fade' style='width:300px;margin-left:-150px;'><div class='modal-header'>";
+	  s += "<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>";
+	  s += "<div>提示</div></div>";
+	  s += "<div class='modal-body'><p>"+details+"</p></div>";
+	  s += "<div class='modal-footer'><a href='javascript:;' class='btn'>确认</a><a href='javascript:;' data-dismiss='modal' class='btn'>取消</a></div></div>";
+	  var obj = $(s).modal('toggle');
+	  $($("a",obj)[0]).click(function(){
+	    $(obj).modal('hide');
+	    callback();
+	    return false;
+	  });
+	}
+
+	function alertModal(details, callback){
+	  var s = "<div class='modal hide fade' style='width:300px;margin-left:-150px;'><div class='modal-header'>";
+	  s += "<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>";
+	  s += "<div>提示</div></div>";
+	  s += "<div class='modal-body'><p>"+details+"</p></div>";
+	  s += "<div class='modal-footer'><a href='javascript:;' class='btn'>确认</a></div></div>";
+	  var obj = $(s).modal('toggle');
+	  $($("a",obj)[0]).click(function(){
+	    $(obj).modal('hide');
+	  });
+	  $(obj).on('hidden', function () {
+	    if(callback)
+	      callback();
+	  });
+	}
+</script>
