@@ -1,10 +1,6 @@
 About
 ------------------------
 
-source code of app:
-
-https://itunes.apple.com/us/app/you-yue/id657763987?ls=1&mt=8
-
 ![](https://github.com/zhiyu/epub/raw/master/screenshot.png)
 
 Contact
