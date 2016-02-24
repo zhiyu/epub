@@ -57,7 +57,10 @@
     self.mainView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.mainView.backgroundColor = [UIColor blackColor];
     
-    [self.window addSubview:mainView];
+    UIViewController *rootViewController = [UIViewController new];
+    rootViewController.view = mainView;
+    self.window.rootViewController = rootViewController;
+    //    [self.window addSubview:mainView];
     [self.window makeKeyAndVisible];
     
     BookViewController *_bookViewController = [[BookViewController alloc] init];
